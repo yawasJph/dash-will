@@ -9,8 +9,8 @@ loginForm.addEventListener('submit', async (event) => {
         return; // If the form is not valid, stop the submission
     }
 
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
+    const email = inputsLogin[0].value.trim();
+    const password = inputsLogin[1].value.trim();
 
     // Obtener usuarios del localStorage
     const users = JSON.parse(localStorage.getItem('users')) || [];

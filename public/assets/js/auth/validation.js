@@ -2,9 +2,8 @@ import { inputs} from "./utils.js";
 
 export const isRegisterFormValid = () => {
 
-    console.log(inputs)
     let isValid = true;
-
+    
     const errorMessages = {
         name: 'Name is required.',
         email: 'Email is required.',
@@ -47,7 +46,7 @@ export const isRegisterFormValid = () => {
 
     })
 
-    isValid = true; // Reset isValid to true before validation checks
+    return isValid // Reset isValid to true before validation checks
 
     // let errorMessages = [];
     // const name = document.getElementById('name').value.trim();

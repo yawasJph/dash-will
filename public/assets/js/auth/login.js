@@ -1,4 +1,4 @@
-
+//import { User } from "./User.js";
 export const loginForm = document.getElementById('login-form');
 export const inputsLogin = loginForm.querySelectorAll('input');
 
@@ -14,10 +14,11 @@ loginForm.addEventListener('submit', async (event) => {
 
     // Obtener usuarios del localStorage
     const users = JSON.parse(localStorage.getItem('users')) || [];
+    console.log(JSON.stringify(users))
 
     // Buscar usuario que coincida
-    const user = users.find(u => u.email === email && u.password === password);
-
+    const user = users.find(u => u.email === email && u.pass === password);
+    
     if (user) {
         alert('Login successful!');
         // Puedes guardar el usuario logueado si lo deseas
